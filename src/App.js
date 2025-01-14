@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import HomeScreen from './components/HomeScreen';
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <div className="App">
+     <HomeScreen />
+    </div>
+  );
 }
 
-export default App
+export default App;
