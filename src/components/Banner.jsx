@@ -1,6 +1,11 @@
 import React from 'react'
 import '../styles/banner.css'
 const Banner = () => {
+
+  const truncate = (string, n) => {
+    return string?.length > n ? string.substr(0,n-1) + '...' : string
+  }
+
   return (
     <header style={{
         backgroundImage: `url('https://cdn.arstechnica.net/wp-content/uploads/2022/07/netflix.jpg')`,
@@ -13,7 +18,7 @@ const Banner = () => {
                 <button className='banner-button'>Play</button>
                 <button className='banner-button'>My List</button>
             </div>
-            <h1 className="banner-description">Movie description</h1>
+            <h1 className="banner-description">{truncate(`Movie description`,150)}</h1>
         </div>
 
         <div className='banner-fadeBtm' />
